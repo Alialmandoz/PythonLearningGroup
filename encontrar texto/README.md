@@ -16,3 +16,14 @@ El archivo tene entradas de datos distribuidos de la siguiente manera (los tabs 
 - Uno o dos datos
 
 El archivo tambien tiene renglones con informes, no se analizan
+
+## Modo de uso
+### simple.py
+Simplemente correr `python3 simple.py` en la consola
+### main.py
+Correr en la consola `python3 main.py [nombre de archivo aquí]` en la consola
+
+## Explicación de los scripts
+El archivo main contiene 3 funciones para modularizar sus funcionalidades, una recibe un string (el renglón), lo analiza y depura los datos que son necesarios, si encuentra inconsistencias, escapa de la función y no sigue analizando el resto del renglón.
+Una segunda función, se encarga de organizar la data recibida [Esta en particular, esta un tanto mal, genera acoplamiento]. Es una función pequeña en este caso, en casos más complejos suele ser necesario.
+Una tercer función, recibe el nombre del archivo, y dos funciones, y solo recorre el archivo que se le pasa, aplica la primer función al renglón, y la segunda función al resultado. Luego retorna lo obtenido

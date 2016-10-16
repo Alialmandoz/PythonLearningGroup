@@ -1,5 +1,5 @@
-import sys
 from pprint import pprint
+#solo para que se vea lindo, uso pretty print
 
 def procesar_renglon(cadena):
     """Esta funcion toma una cadena de texto y procesa los datos y los devuelve
@@ -31,30 +31,25 @@ def procesar_renglon(cadena):
         print("El primer valor debe ser un número, revisar fuente")
     return {'numero': primero_numero, 'apellido': apellido, 'nombre': nombre, 'codigo': codigo, 'fecha': fecha }
 
-def procesar_datos(elem):
-    """Esta funcion maneja los datos obtenidos, procesados por la funcion argumento"""
-    aux = elem['numero']
-    del elem['numero']
-    #print(elem)conjunto[ aux ] = elem
-    conjunto[ aux ] = elem
 
-def recorrer_archivo(archivo, func1, func2):
+def recorrer_archivo():
     """Esta funcion recorre el archivo de texto que se le pasa y a cada renglon
     le aplica la funcion de argumento"""
     conjunto = {}
 
-    with open( archivo, 'r' ) as file:
+    with open( "MAYO2014.txt", 'r' ) as file:
         todos = file.readlines()
         for renglon in todos:
-            aux = func1(renglon)
-            if aux:
-                func2(aux)
-        else:
-            return conjunto
+            elem = procesar_renglon(renglon)
+            if elem:
+                aux = elem['numero']
+                del elem['numero']
+                conjunto[ aux ] = elem
+    return conjunto
 
-nombre_del_archivo = sys.argv[1] #argumentos pasados por consola [0] es el script, [1] el archivo de texto
 
-resultado = recorrer_archivo( nombre_del_archivo, procesar_renglon, procesar_datos )
+resultado = recorrer_archivo()
+#solo para que se vea lindo, uso pretty print
 print("Tu resultado tiene {0} lineas".format( len(resultado) ) )
 pprint(resultado)
 print("Once again. Tu resultado tiene {0} lineas".format( len(resultado) ) )
