@@ -25,5 +25,4 @@ Correr en la consola `python3 main.py [nombre de archivo aquí]` en la consola
 
 ## Explicación de los scripts
 El archivo main contiene 3 funciones para modularizar sus funcionalidades, una recibe un string (el renglón), lo analiza y depura los datos que son necesarios, si encuentra inconsistencias, escapa de la función y no sigue analizando el resto del renglón.
-Una segunda función, se encarga de organizar la data recibida [Esta en particular, esta un tanto mal, genera acoplamiento]. Es una función pequeña en este caso, en casos más complejos suele ser necesario.
-Una tercer función, recibe el nombre del archivo, y dos funciones, y solo recorre el archivo que se le pasa, aplica la primer función al renglón, y la segunda función al resultado. Luego retorna lo obtenido
+Una segunda función, recibe el nombre del archivo, y una funciones, y solo recorre el archivo que se le pasa, aplica la función al renglón. Luego retorna lo obtenido
