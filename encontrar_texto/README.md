@@ -33,6 +33,6 @@ la lista procesada de DataStructure.
 de poseer la funcion de generar el archivo output.txt.    
 Main se encarga de llamar a output con el parametro ingresado por consola
 
-## tests
+## Tests
 Hay una serie de pruebas unitarias hechas sobre Resultado y DataStructure 
-las cuales se ejecutan corriendo pytest en la carpeta test.
+las cuales se ejecutan corriendo pytest en la carpeta tests.
