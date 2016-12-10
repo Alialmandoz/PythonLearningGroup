@@ -3,4 +3,4 @@ Nueva actividad surgida en base a de este [Link](link:http://www.pythondiario.co
 
 ## Modo de uso
 
-Correr en la consola python `[main.p]y` en la consola 
+Correr en la consola python `[main.py]` en la consola 
